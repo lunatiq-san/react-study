@@ -1,5 +1,7 @@
 // For create element and work with VDOM import React
 // In each component import React
+// In React - false, null, undefined don't render
+
 import React from "react";
 // In order to VDOM render in DOM, import packet ReactDOM
 import ReactDOM from "react-dom";

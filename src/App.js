@@ -11,10 +11,14 @@ const App = () => {
   return (
     <div>
       <h1>Main app component-container</h1>
-      <a href="https://ru.reactjs.org/docs/strict-mode.html" target="_blank">
+      <a
+        href="https://ru.reactjs.org/docs/strict-mode.html"
+        target="_blank"
+        rel="noreferrer"
+      >
         StrictMode
       </a>
-      {/* Painting src, title -> props */}
+      {/* Painting url, title etc. (any name) -> props */}
       <Painting
         url={paintings[0].url}
         title={paintings[0].title}
