@@ -4,9 +4,9 @@
 - ✅ Пакеты react и react-dom
 - ✅ React-элементы и React.createElement()
 - ✅ JSX как шаблонизатор. Выражения в JSX. Рендер по условию.
-- Компоненты-функции
-- [Строгий режим](https://ru.reactjs.org/docs/strict-mode.html)
-- Передача данных через Props
+- ✅ Компоненты-функции
+- ✅ [Строгий режим](https://ru.reactjs.org/docs/strict-mode.html)
+- ✅ Передача данных через Props
 - Свойство defaultProps и дефолтные локальные изображения.
 - Пакет prop-types, свойство propTypes
 - [Инструменты разработчика - React DevTools](http://fecore.net.ua/books/rq7s2k-react/lesson-01/#react-devtools)

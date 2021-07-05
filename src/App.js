@@ -22,6 +22,7 @@ const App = () => {
         profileUrl={paintings[0].author.url}
         tag={paintings[0].author.tag}
         target="_blank"
+        quantity={paintings[0].quantity}
       />
       <Painting
         url="https://cdn.pixabay.com/photo/2017/08/02/22/38/bird-2573779_1280.jpg"
@@ -29,6 +30,7 @@ const App = () => {
         price={300}
         profileUrl="https://pixabay.com/users/ractapopulous-24766/"
         tag="ractapopulous"
+        quantity={paintings[2].quantity}
       />
     </div>
   );
