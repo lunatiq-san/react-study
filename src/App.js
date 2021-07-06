@@ -4,20 +4,18 @@
 // 1 file - 1 component
 // In each component import React
 import React from "react";
-import Painting from "./components/Paintings";
+import Logo from "./components/Logo";
+// import Painting for 1 element
+import Painting from "./components/Painting";
+import PaintingList from "./components/PaintingList";
 import paintings from "./paintings.json";
+
+const colors = ["blue", "red", "green"];
 
 const App = () => {
   return (
     <div>
-      <h1>Main app component-container</h1>
-      <a
-        href="https://ru.reactjs.org/docs/strict-mode.html"
-        target="_blank"
-        rel="noreferrer"
-      >
-        StrictMode
-      </a>
+      <Logo text="Main app component-container" />
       {/* Painting url, title etc. (any name) -> props */}
       <Painting
         url={paintings[0].url}
@@ -28,14 +26,15 @@ const App = () => {
         target="_blank"
         quantity={paintings[0].quantity}
       />
-      <Painting
-        url="https://cdn.pixabay.com/photo/2017/08/02/22/38/bird-2573779_1280.jpg"
-        title="Bird. Animal art abstract"
-        price={300}
-        profileUrl="https://pixabay.com/users/ractapopulous-24766/"
-        tag="ractapopulous"
-        quantity={paintings[2].quantity}
-      />
+      {/* Collection render */}
+      <ul>
+        {colors.map((color) => (
+          // Static collection. We can add key={item}
+          <li key={color}>{color}</li>
+        ))}
+      </ul>
+
+      <PaintingList items={paintings} />
     </div>
   );
 };
