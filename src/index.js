@@ -5,7 +5,8 @@
 import React from "react";
 // In order to VDOM render in DOM, import packet ReactDOM
 import ReactDOM from "react-dom";
-import App from "./App";
+// import App from "./App";
+import AppSummary from "./AppSummary";
 // import reportWebVitals from './reportWebVitals';
 
 // JSX - template, which with the help Babel create React.createElement()
@@ -13,7 +14,10 @@ import App from "./App";
 // Strict Mode - https://ru.reactjs.org/docs/strict-mode.html
 // a tool for detecting potential problems in the application
 ReactDOM.render(
-  <React.StrictMode>{<App />}</React.StrictMode>,
+  <React.StrictMode>
+    {/* {<App />} */}
+    {<AppSummary />}
+  </React.StrictMode>,
   document.getElementById("root")
 );
 

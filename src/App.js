@@ -8,6 +8,7 @@ import Logo from "./components/Logo";
 // import Painting for 1 element
 import Painting from "./components/Painting";
 import PaintingList from "./components/PaintingList";
+import Panel from "./components/Panel";
 import paintings from "./paintings.json";
 
 const colors = ["blue", "red", "green"];
@@ -15,6 +16,16 @@ const colors = ["blue", "red", "green"];
 const App = () => {
   return (
     <div>
+      <Panel title="Panel">
+        {/* children */}
+        <p>Hello</p>
+        <a href="">link</a>
+      </Panel>
+      <Panel>
+        {/* children */}
+        <p>Good bye</p>
+        <p>Some text</p>
+      </Panel>
       <Logo text="Main app component-container" />
       {/* Painting url, title etc. (any name) -> props */}
       <Painting
