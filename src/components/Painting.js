@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import defaultImage from "./default.jpg";
 
 const Painting = ({ url, title, target, profileUrl, tag, price, quantity }) => {
-  const availability = quantity < 10 ? "Ends" : "In stock";
+  const availability = quantity < 10 ? "Few left" : "In stock";
   return (
     <div>
       <img src={url} alt={title} width="120" target={target} />
@@ -17,7 +17,7 @@ const Painting = ({ url, title, target, profileUrl, tag, price, quantity }) => {
       <p>Price: {price} credits</p>
       {/* Conditional render */}
       <p>Balance: {availability}</p>
-      <button type="button">Add in basket</button>
+      <button type="button">Add to cart</button>
     </div>
   );
 };

@@ -3,7 +3,7 @@
 // Components must be named with a capital letter
 // 1 file - 1 component
 // In each component import React
-import React from "react";
+// import React from "react";
 import Logo from "./components/Logo";
 // import Painting for 1 element
 import Painting from "./components/Painting";

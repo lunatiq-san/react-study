@@ -6,20 +6,21 @@ import React from "react";
 // In order to VDOM render in DOM, import packet ReactDOM
 import ReactDOM from "react-dom";
 // import App from "./App";
-import AppSummary from "./AppSummary";
-// import reportWebVitals from './reportWebVitals';
+// import App from "./AppSummary";
+import AppLesson from "./AppLesson";
+// import report WebVitals from './reportWebVitals';
 
 // JSX - template, which with the help Babel create React.createElement()
 
 // Strict Mode - https://ru.reactjs.org/docs/strict-mode.html
 // a tool for detecting potential problems in the application
-ReactDOM.render(
-  <React.StrictMode>
-    {/* {<App />} */}
-    {<AppSummary />}
-  </React.StrictMode>,
-  document.getElementById("root")
-);
+// ReactDOM.render(
+//   <React.StrictMode>
+//     {/* {<App />} */}
+//     {<AppSummary />}
+//   </React.StrictMode>,
+//   document.getElementById("root")
+// );
 
 // ReactDOM.render(template, document.getElementById("root"));
 // render принимает то, что я хочу зарендерить -> и куда
@@ -32,4 +33,21 @@ ReactDOM.render(
 
 // ***************************************************
 // Test
+
+// const favouriteBooks = [
+//   { id: "id-1", name: "JS for beginners" },
+//   { id: "id-2", name: "React basics" },
+//   { id: "id-3", name: "React Router overview" },
+//   { id: "id-4", name: "Redux in depth" },
+// ];
+
+// const BookList = ({ books }) => (
+//   <ul>
+//     {books.map((book) => (
+//       <li></li>
+//     ))}
+//   </ul>
+// );
+
+ReactDOM.render(<AppLesson />, document.getElementById("root"));
 // ****************************************************************
