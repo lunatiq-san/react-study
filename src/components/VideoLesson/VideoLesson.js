@@ -1,7 +1,7 @@
 export const VideoLesson = ({ products, children }) => {
   return (
     <div>
-      <h2>{children}</h2>
+      {children}
       <ul>
         {products.map((product) => (
           <li key={product.id}>
@@ -13,4 +13,8 @@ export const VideoLesson = ({ products, children }) => {
       </ul>
     </div>
   );
+};
+
+VideoLesson.defaultProps = {
+  children: <h2>Default props children</h2>,
 };

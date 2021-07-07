@@ -33,7 +33,7 @@ const products = [
 function AppLesson() {
   return (
     <div className="App">
-      <VideoLesson products={products}>Children VideoLesson</VideoLesson>
+      <VideoLesson products={products}></VideoLesson>
     </div>
   );
 }
