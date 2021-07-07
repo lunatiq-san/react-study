@@ -1,7 +1,10 @@
-export const VideoLesson = ({ products, children }) => {
+import PropTypes from "prop-types";
+
+export const VideoLesson = ({ products, price, children }) => {
   return (
     <div>
-      {children}
+      <h2>{children}</h2>
+      <h2>{price}$</h2>
       <ul>
         {products.map((product) => (
           <li key={product.id}>
@@ -16,5 +19,19 @@ export const VideoLesson = ({ products, children }) => {
 };
 
 VideoLesson.defaultProps = {
-  children: <h2>Default props children</h2>,
+  children: "Default props children",
+  price: 9.99,
+};
+
+VideoLesson.propTypes = {
+  children: PropTypes.string,
+  price: PropTypes.number.isRequired,
+  products: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      price: PropTypes.number.isRequired,
+      image: PropTypes.string.isRequired,
+    })
+  ),
 };
