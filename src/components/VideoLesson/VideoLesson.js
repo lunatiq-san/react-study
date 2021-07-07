@@ -1,7 +1,7 @@
-export const VideoLesson = ({ products }) => {
+export const VideoLesson = ({ products, children }) => {
   return (
     <div>
-      <h2>Product list</h2>
+      <h2>{children}</h2>
       <ul>
         {products.map((product) => (
           <li key={product.id}>
