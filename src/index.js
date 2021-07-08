@@ -7,7 +7,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 // import App from "./App";
 // import App from "./AppSummary";
-import AppLesson from "./AppLesson";
+// import AppLesson from "./AppLesson";
 // import report WebVitals from './reportWebVitals';
 
 // JSX - template, which with the help Babel create React.createElement()
@@ -34,20 +34,26 @@ import AppLesson from "./AppLesson";
 // ***************************************************
 // Test
 
-// const favouriteBooks = [
-//   { id: "id-1", name: "JS for beginners" },
-//   { id: "id-2", name: "React basics" },
-//   { id: "id-3", name: "React Router overview" },
-//   { id: "id-4", name: "Redux in depth" },
-// ];
+// ReactDOM.render(<AppLesson />, document.getElementById("root"));
 
-// const BookList = ({ books }) => (
-//   <ul>
-//     {books.map((book) => (
-//       <li></li>
-//     ))}
-//   </ul>
-// );
+function ListItem(props) {
+  // Correct! There is no need to specify the key here:
+  return <li>{props.value}</li>;
+}
 
-ReactDOM.render(<AppLesson />, document.getElementById("root"));
+function NumberList(props) {
+  const numbers = props.numbers;
+  const listItems = numbers.map((number) => (
+    // Correct! Key should be specified inside the array.
+    <ListItem key={number.toString()} value={number} />
+  ));
+  return <ul>{listItems}</ul>;
+}
+
+const numbers = [1, 2, 3, 4, 5];
+ReactDOM.render(
+  <NumberList numbers={numbers} />,
+  document.getElementById("root")
+);
+
 // ****************************************************************
