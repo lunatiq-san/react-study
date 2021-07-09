@@ -19,7 +19,7 @@ const App = () => {
       <Panel title="Panel">
         {/* children */}
         <p>Hello</p>
-        <a href="">link</a>
+        <a href="https://google.com">link</a>
       </Panel>
       <Panel>
         {/* children */}

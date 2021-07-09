@@ -5,7 +5,7 @@
 import React from "react";
 // In order to VDOM render in DOM, import packet ReactDOM
 import ReactDOM from "react-dom";
-// import App from "./App";
+import App from "./App";
 // import App from "./AppSummary";
 // import AppLesson from "./AppLesson";
 // import report WebVitals from './reportWebVitals';
@@ -14,13 +14,13 @@ import ReactDOM from "react-dom";
 
 // Strict Mode - https://ru.reactjs.org/docs/strict-mode.html
 // a tool for detecting potential problems in the application
-// ReactDOM.render(
-//   <React.StrictMode>
-//     {/* {<App />} */}
-//     {<AppSummary />}
-//   </React.StrictMode>,
-//   document.getElementById("root")
-// );
+ReactDOM.render(
+  <React.StrictMode>
+    {<App />}
+    {/* {<AppSummary />} */}
+  </React.StrictMode>,
+  document.getElementById("root")
+);
 
 // ReactDOM.render(template, document.getElementById("root"));
 // render принимает то, что я хочу зарендерить -> и куда
@@ -36,24 +36,24 @@ import ReactDOM from "react-dom";
 
 // ReactDOM.render(<AppLesson />, document.getElementById("root"));
 
-function ListItem(props) {
-  // Correct! There is no need to specify the key here:
-  return <li>{props.value}</li>;
-}
+// function ListItem(props) {
+// Correct! There is no need to specify the key here:
+// return <li>{props.value}</li>;
+// }
 
-function NumberList(props) {
-  const numbers = props.numbers;
-  const listItems = numbers.map((number) => (
-    // Correct! Key should be specified inside the array.
-    <ListItem key={number.toString()} value={number} />
-  ));
-  return <ul>{listItems}</ul>;
-}
+// function NumberList(props) {
+//   const numbers = props.numbers;
+//   const listItems = numbers.map((number) => (
+//     // Correct! Key should be specified inside the array.
+//     <ListItem key={number.toString()} value={number} />
+//   ));
+//   return <ul>{listItems}</ul>;
+// }
 
-const numbers = [1, 2, 3, 4, 5];
-ReactDOM.render(
-  <NumberList numbers={numbers} />,
-  document.getElementById("root")
-);
+// const numbers = [1, 2, 3, 4, 5];
+// ReactDOM.render(
+//   <NumberList numbers={numbers} />,
+//   document.getElementById("root")
+// );
 
 // ****************************************************************
