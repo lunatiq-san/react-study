@@ -12,3 +12,8 @@
 - [Инструменты разработчика - React DevTools](http://fecore.net.ua/books/rq7s2k-react/lesson-01/#react-devtools)
 - ✅ Работа с коллекциями, ключи
 - ✅ Основы композиции компонентов, потомки (props.children). Делаем панель.
+
+- ✅ In every project: create 3 files - .huskyrc, .lintstagedrc,
+  .prettierrc.json
+- ✅ Normalize CSS: npm install modern-normalize
+- ✅ Usage Normalize CSS: import 'modern-normalize/modern-normalize.css' in JS;

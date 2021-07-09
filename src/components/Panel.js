@@ -1,12 +1,16 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
+// if static styles
 const styles = {
-  outline: "1px solid tomato",
+  container: {
+    width: '50%',
+    outline: '1px solid tomato',
+  },
 };
 
 const Panel = ({ title, children }) => (
-  <div style={styles}>
+  <div style={styles.container}>
     {/* if title === true -> render <h2>{title}</h2> */}
     {title && <h2>{title}</h2>}
     {children}
@@ -14,7 +18,7 @@ const Panel = ({ title, children }) => (
 );
 
 Panel.defaultProps = {
-  title: "",
+  title: '',
   children: [],
 };
 

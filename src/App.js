@@ -4,18 +4,28 @@
 // 1 file - 1 component
 // In each component import React
 // import React from "react";
-// import Logo from "./components/Logo";
+import Logo from './components/Logo';
 // import Painting for 1 element
 import Painting from './components/Painting';
 import PaintingList from './components/PaintingList';
 import Panel from './components/Panel';
 import paintings from './paintings.json';
+import ColorPicker from './components/ColorPicker/ColorPicker';
 
 const colors = ['blue', 'red', 'green'];
+const colorPickerOptions = [
+  { label: 'red', color: '#F44336' },
+  { label: 'green', color: '#4CAF50' },
+  { label: 'blue', color: '#2196F3' },
+  { label: 'grey', color: '#607D8B' },
+  { label: 'pink', color: '#E91E63' },
+  { label: 'indigo', color: '#3F51B5' },
+];
 
 const App = () => {
   return (
     <div>
+      <ColorPicker options={colorPickerOptions} />
       <Panel title="Panel">
         {/* children */}
         <p>Hello</p>
@@ -45,7 +55,7 @@ const App = () => {
         ))}
       </ul>
 
-      <PaintingList items={paintings123} />
+      <PaintingList items={paintings} />
     </div>
   );
 };
