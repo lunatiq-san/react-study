@@ -2,10 +2,10 @@
 // In each component import React
 // In React - false, null, undefined don't render
 
-import React from "react";
+// import React from "react";
 // In order to VDOM render in DOM, import packet ReactDOM
-import ReactDOM from "react-dom";
-import App from "./App";
+import ReactDOM from 'react-dom';
+import App from './App';
 // import App from "./AppSummary";
 // import AppLesson from "./AppLesson";
 // import report WebVitals from './reportWebVitals';
@@ -19,7 +19,7 @@ ReactDOM.render(
     {<App />}
     {/* {<AppSummary />} */}
   </React.StrictMode>,
-  document.getElementById("root")
+  document.getElementById('root'),
 );
 
 // ReactDOM.render(template, document.getElementById("root"));
