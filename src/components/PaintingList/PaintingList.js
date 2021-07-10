@@ -1,14 +1,14 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Painting from "./Painting";
+import PropTypes from 'prop-types';
+import Painting from '../Painting/Painting';
+import './PaintingList.css';
 
 // If we have Component, he don't import data in himself. Should receive as props
 const PaintingList = ({ items }) => (
-  <ul>
+  <ul className="PaintingList">
     {items.map(({ id, url, title, price, author, quantity }) => (
       // key={index} for static collection
       // 99% our collection will be dynamic
-      <li key={id}>
+      <li key={id} className="PaintingList__item">
         <Painting
           url={url}
           title={title}
@@ -28,7 +28,7 @@ PaintingList.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
-    })
+    }),
   ).isRequired,
 };
 

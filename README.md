@@ -17,3 +17,4 @@
   .prettierrc.json
 - ✅ Normalize CSS: npm install modern-normalize
 - ✅ Usage Normalize CSS: import 'modern-normalize/modern-normalize.css' in JS;
+- ✅ Using: SASS or CSS module;

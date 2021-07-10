@@ -1,12 +1,14 @@
-import React from "react";
-import PropTypes from "prop-types";
-import defaultImage from "./default.jpg";
+import React from 'react';
+import PropTypes from 'prop-types';
+import defaultImage from '../default.jpg';
+
+import './Painting.css';
 
 const Painting = ({ url, title, target, profileUrl, tag, price, quantity }) => {
-  const availability = quantity < 10 ? "Few left" : "In stock";
+  const availability = quantity < 10 ? 'Few left' : 'In stock';
   return (
-    <div>
-      <img src={url} alt={title} width="120" target={target} />
+    <div className="Painting">
+      <img src={url} alt={title} target={target} />
       <h2>{title}</h2>
       <p>
         Author:
